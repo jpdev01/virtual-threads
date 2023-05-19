@@ -10,13 +10,14 @@ public class Main {
     public static void main(String[] args) {
         VirtualThreads virtualThreads = new VirtualThreads();
 
-        ExecutorService executorService = Executors.newFixedThreadPool(100); // empilha até 100 threads em paralelo
+        int nThreads = 100;
+        ExecutorService executorService = Executors.newFixedThreadPool(nThreads); // empilha até 100 threads em paralelo
 
         Instant start = Instant.now();
         virtualThreads.executeTask(1000, executorService);
         Instant end = Instant.now();
 
         long seconds = ChronoUnit.SECONDS.between(start, end);
-        System.out.println(String.format("Done in %d seconds", seconds));
+        System.out.println(String.format("Done in %d seconds with %d threads", seconds, nThreads));
     }
 }
