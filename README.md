@@ -8,7 +8,7 @@ Se fosse algo envolvendo apenas CPU, não haveria ganhos de desempenho. Ela não
 
 O Arquivo VirtualThreads contém exemplo de uso comparando o uso de Threads comuns e Virtual Threads. Para comparar basta trocar a instância do ExecutorService:
 
-```java
+``` java
 ExecutorService executor = Executors.newFixedThreadPool(400); // Com pool de Threds
 ExecutorService executorVirtual = Executors.newVirtualThreadPerTaskExecutor(); // Com Virtual Threads
 ```
