@@ -37,5 +37,12 @@ public class VirtualThreads {
         } catch (Exception exception) {
             throw new RuntimeException(exception);
         }
+
+        // outra forma de fazer esperar:
+//        try (ExecutorService executorService = executor) {
+//            for (int i = 0; i < quantidadeTarefas; i++) {
+//                executor.execute(createTask());
+//            }
+//        }
     }
 }
