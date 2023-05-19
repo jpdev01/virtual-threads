@@ -12,7 +12,7 @@ public class VirtualThreads {
         return () -> {
             int taskId = counter.incrementAndGet();
             // simula IO (entrada e saida), nao usa somente cpu
-            long timeout = (long) Math.random() * 1000 + 100;
+            long timeout = (long) (Math.random() * 1000) + 100;
 
             System.out.println(String.format("Task com id %d executing for %s", taskId, timeout));
 
