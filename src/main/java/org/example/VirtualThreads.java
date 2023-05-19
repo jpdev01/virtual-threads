@@ -22,7 +22,7 @@ public class VirtualThreads {
                 throw new RuntimeException(exception);
             }
 
-            System.out.println("Task done!");
+            System.out.println(String.format("Task %d done!", taskId));
         };
     }
 
